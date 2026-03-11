@@ -1,4 +1,4 @@
-# capturing_peak_flood_conditions_project
+# capturing_peak_flood
 
 ## Installation
 
