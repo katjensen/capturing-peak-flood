@@ -1,0 +1,52 @@
+[project]
+name = "capturing-peak-flood-conditions-project"
+version = "0.1.0"
+description = "Project for capturing peak flood conditions"
+authors = ["Annett Anders <annett.anders@iceye.com>"]
+channels = ["conda-forge"]
+platforms = ["osx-arm64", "osx-64", "linux-64", "win-64"]
+
+[dependencies]
+python = ">=3.12"
+ipykernel = ">=7.1.0,<8"
+pip = ">=25.2,<26"
+folium = ">=0.20.0,<0.21"
+basemap = ">=2.0.0,<3"
+contextily = ">=1.6.2,<2"
+pixi-kernel = ">=0.6.7,<0.7"
+jupyterlab = ">=4.4.10,<5"
+
+[pypi-dependencies]
+skyfield = ">=1.49"
+astropy = ">=6.1.1"
+requests = ">=2.32.3"
+pandas = ">=2.2.2"
+jupyter = ">=1.0.0"
+beyond = ">=0.7.5"
+matplotlib = ">=3.9.1"
+geopandas = ">=1.0.1"
+geodatasets = ">=2024.7.0"
+ruff = ">=0.5.2"
+sqlalchemy = ">=2.0.31"
+psycopg2-binary = ">=2.9.9"
+contextily = ">=1.6.0"
+tqdm = ">=4.66.4"
+pre-commit = ">=3.7.1"
+sqlfluff = ">=3.1.0"
+black = ">=24.4.2"
+isort = ">=5.13.2"
+pyyaml = ">=6.0.1"
+python-dotenv = ">=1.0.1"
+seaborn = ">=0.13.2"
+boto3 = ">=1.35.10"
+geojson = ">=3.1.0"
+h3 = "==4.3.1"
+
+[tasks]
+test = "python unit_tests/run_tests.py"
+notebook = "jupyter notebook"
+lint = "ruff check ."
+format = "black . && isort ."
+
+[tool.pixi.pypi-dependencies]
+    capturing_peak_flood_conditions_project = { path = ".", editable = true }
